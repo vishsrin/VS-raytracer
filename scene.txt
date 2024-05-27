@@ -1,0 +1,92 @@
+// Cornell Box for RayTracer
+ANTIALIAS 3
+BACKGROUND 120 120 120        // Background color
+MAXDEPTH 12              // Raytracing depth
+LIGHT
+    POS 0 120 40
+    DIFF 1.0 1.0 1.0 	//white light
+    SPEC 0.2 0.2 0.2	//full  white specular
+
+LIGHT
+    POS  0 -120 40
+    DIFF 0.8 1.0 1.0	//red light
+    SPEC 1.0 1.0 1.0	//full white specular
+
+
+SPHERE
+    POS 0 -20 50 
+    RADIUS 10
+    DIFF 0.7 0.0 0.4  //some diffuse
+    SPEC 0.0 0.0 0.0 	//perfect mirror
+	SHININESS 20.0          // Shininess coefficient
+	
+SPHERE
+    POS -78 60 75 
+    RADIUS 15
+    DIFF 1.0 1.0 0.0  //yellow diffuse sphere
+    SPEC 1.0 1.0 1.0 
+	SHININESS 200.0          // Shininess coefficient
+
+SPHERE
+POS 63 0 60
+RADIUS 12.2
+DIFF 0.0 0.0 0.0
+SPEC 1.0 1.0 1.0
+	SHININESS 150.0
+
+
+// Back Face
+QUAD
+POS -150 -150 150
+     POS 150 -150 150
+     POS -150 150 150
+     DIFF 0.0 0.2 0.2
+     SPEC 1.0 1.0 1.0
+SHININESS 200.0
+	 
+// Right Face
+QUAD
+POS 150 -150 150
+    POS 150 -150 -150
+    POS 150 150 150
+    DIFF 0.0 1.0 0.0
+    SPEC 0.0  0.0 0.0
+	SHININESS 10.0 
+
+// Front Face
+QUAD
+ POS -150 -150 -150
+ POS 150 -150 -150
+ POS -150 150 -150
+    DIFF 0.0 0.0 0.0
+    SPEC 1.0 1.0 1.0
+SHININESS 10.0
+
+// Left Face
+QUAD
+    POS -150 -150 -150
+    POS -150 -150 150 
+    POS -150 150 -150
+    DIFF 1.0 0.0 0.0
+    SPEC 0.0 0.0 0.0
+	SHININESS 10.0 
+
+// Bottom Face
+QUAD
+    POS -150 -150 150
+    POS 150 -150 150
+    POS -150 -150 -150
+    DIFF 1.0 1.0 0.0
+    SPEC 0.2 0.2 0.2
+	SHININESS 10.0 
+
+// Top Face
+QUAD
+    POS -150 150 150
+    POS 150 150 150
+    POS -150 150 -150
+    DIFF 0.0 0.6 0.7
+    SPEC 0.2 0.2 0.2
+	SHININESS 20.0 
+
+RESOLUTION 1024	//image resolution

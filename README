@@ -1,0 +1,6 @@
+CS 434 Lab 2
+Vishnu Srinivas, Spring 2024
+
+Edit scene description in scene.txt,
+
+run make to render image to outp.ppm
